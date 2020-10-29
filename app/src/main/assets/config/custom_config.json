@@ -1,0 +1,14 @@
+[
+  {
+    "value": "NO",
+    "key": "h5_shouldverifyapp"
+  },
+  {
+    "value": "NO",
+    "key": "mp_ta_use_orginal_mini_nagivationbar"
+  },
+  {
+    "value": "wss://cn-hangzhou-mproxy.cloud.alipay.com/host/",
+    "key": "h5_remote_debug_host"
+  }
+]
