@@ -1,5 +1,6 @@
 package com.example.mpaasdemo
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
@@ -55,6 +56,10 @@ class MainActivity : AppCompatActivity() {
                 bundle.putBoolean("needAnimInTiny", true)
                 MPNebula.startApp(appId, bundle)
             }
+        }
+
+        findViewById<Button>(R.id.openFin).setOnClickListener {
+            startActivity(Intent(this, FinActivity::class.java))
         }
     }
 

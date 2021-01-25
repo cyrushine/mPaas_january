@@ -10,10 +10,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MPaas_january">
+        <activity android:name=".FinActivity"></activity>
 
-        <meta-data android:name="nebula.android.meta.enable" android:value="true"/>
-
-        <meta-data android:name="UCSDKAppKey" android:value="I0CdQsCz07KUcVCQMx3TxXfX094uj5QSGBaUymUD+Pxb0OcZP/dlPWUxHTFfk+lDvJs0wp6JDsM6+n5qlM3+Og=="/>
+        <meta-data
+            android:name="nebula.android.meta.enable"
+            android:value="true" />
+        <meta-data
+            android:name="UCSDKAppKey"
+            android:value="I0CdQsCz07KUcVCQMx3TxXfX094uj5QSGBaUymUD+Pxb0OcZP/dlPWUxHTFfk+lDvJs0wp6JDsM6+n5qlM3+Og==" />
 
         <activity android:name=".MainActivity">
             <intent-filter>

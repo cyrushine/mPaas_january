@@ -19,6 +19,16 @@ android {
             abiFilters 'armeabi'
         }
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        // 凡泰小程序
+        // SDK Key
+        buildConfigField "String", "SDK_KEY", "\"hmo+ZbwhyKy1DOp69T5D36A+MkhePdu9P2MZDiH0No4=\""
+        // SDK Secret
+        buildConfigField "String", "SDK_SECRET", "\"e65f62cfbf1c84d4\""
+        // 服务器地址
+        buildConfigField "String", "API_URL", "\"https://api.finclip.com\""
+        // 服务器接口请求路由前缀
+        buildConfigField "String", "API_PREFIX", "\"/api/v1/mop/\""
     }
 
     signingConfigs {
@@ -56,6 +66,14 @@ android {
 
     packagingOptions {
         pickFirst '/lib/armeabi/libWebViewCore_3.21.0.174.200825145737_7z_uc.so'
+
+        // 凡泰小程序
+        // libsdkcore.so是被加固过的，不能被压缩，否则加载动态库时会报错
+        doNotStrip "*/x86/libsdkcore.so"
+        doNotStrip "*/x86_64/libsdkcore.so"
+        doNotStrip "*/armeabi/libsdkcore.so"
+        doNotStrip "*/armeabi-v7a/libsdkcore.so"
+        doNotStrip "*/arm64-v8a/libsdkcore.so"
     }
 }
 
@@ -73,4 +91,7 @@ dependencies {
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
+    // 凡泰小程序
+    implementation 'com.finogeeks.lib:finapplet:+'
 }
